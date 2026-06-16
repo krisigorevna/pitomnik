@@ -1,0 +1,587 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    background: #fcf8f0;
+    color: #2e2b28;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #4d3e35;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== БЛОК 1: ШАПКА ===== */
+.header-block {
+    background: linear-gradient(135deg, #f5ebe1 0%, #e8d9cc 100%);
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+    border-bottom: 4px solid #dbb8a2;
+    animation: fadeSlideDown 0.8s ease-out;
+}
+
+.header-block h1 {
+    font-size: 3.8rem;
+    font-weight: 500;
+    color: #4d3e35;
+    display: inline-block;
+}
+
+.paw-icon {
+    display: inline-block;
+    animation: pawWave 2.8s infinite alternate ease-in-out;
+}
+
+.subhead {
+    font-size: 1.2rem;
+    color: #7f6b5c;
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    border-radius: 40px;
+    margin-top: 0.5rem;
+}
+
+.slogan {
+    font-size: 1.1rem;
+    color: #6b5a4b;
+    margin-top: 0.8rem;
+    font-style: italic;
+}
+
+/* ===== БЛОК 2: О ПИТОМНИКЕ ===== */
+.about-block {
+    background: #fffaf5;
+    padding: 3rem 0;
+    animation: softAppear 1s ease;
+}
+
+.about-block p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* ===== БЛОК 3: ПРЕИМУЩЕСТВА ===== */
+.advantages-block {
+    background: #fcf8f0;
+    padding: 3rem 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.advantage-item {
+    background: #fffcf8;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+    animation: floatPulse 4s infinite alternate ease-in-out;
+}
+
+.advantage-item:nth-child(2) { animation-delay: 0.3s; }
+.advantage-item:nth-child(3) { animation-delay: 0.6s; }
+.advantage-item:nth-child(4) { animation-delay: 0.9s; }
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(140, 100, 75, 0.08);
+    border-color: #cbb2a0;
+}
+
+.advantage-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.advantage-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #4d3e35;
+}
+
+.advantage-item p {
+    font-size: 0.95rem;
+    color: #6f5e4f;
+}
+
+/* ===== БЛОК 4: ПОРОДЫ ===== */
+.breeds-block {
+    background: #fffaf5;
+    padding: 3rem 0;
+}
+
+.breeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.breed-card {
+    background: #fffcf8;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+}
+
+.breed-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(140, 100, 75, 0.1);
+    border-color: #dbb8a2;
+}
+
+.breed-image {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.breed-card h3 {
+    font-size: 1.3rem;
+    color: #4d3e35;
+    margin-bottom: 0.3rem;
+}
+
+.breed-card p {
+    color: #6f5e4f;
+    font-size: 0.95rem;
+}
+
+/* ===== БЛОК 5: КАК МЫ РАБОТАЕМ ===== */
+.process-block {
+    background: #fcf8f0;
+    padding: 3rem 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.step {
+    background: #fffcf8;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(140, 100, 75, 0.06);
+}
+
+.step-number {
+    display: inline-block;
+    background: #dbb8a2;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.step h3 {
+    font-size: 1.1rem;
+    color: #4d3e35;
+    margin-bottom: 0.3rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: #6f5e4f;
+}
+
+/* ===== БЛОК 6: КОТЯТА ===== */
+.kittens-block {
+    background: #fffaf5;
+    padding: 3rem 0;
+}
+
+.kittens-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.kitten-card {
+    background: #fcf8f0;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    font-size: 3.5rem;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+    animation: floatPulse 5s infinite alternate ease-in-out;
+}
+
+.kitten-card:nth-child(2) { animation-delay: 0.2s; }
+.kitten-card:nth-child(3) { animation-delay: 0.4s; }
+.kitten-card:nth-child(4) { animation-delay: 0.6s; }
+.kitten-card:nth-child(5) { animation-delay: 0.8s; }
+.kitten-card:nth-child(6) { animation-delay: 1s; }
+
+.kitten-card:hover {
+    transform: scale(1.08) rotate(-3deg);
+    box-shadow: 0 8px 20px rgba(140, 100, 75, 0.08);
+    border-color: #dbb8a2;
+}
+
+.gallery-note {
+    text-align: center;
+    color: #6f5e4f;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* ===== БЛОК 7: ОТЗЫВЫ ===== */
+.reviews-block {
+    background: #fcf8f0;
+    padding: 3rem 0;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.review-card {
+    background: #fffcf8;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    border-left: 4px solid #dbb8a2;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(140, 100, 75, 0.06);
+}
+
+.review-card p {
+    font-style: italic;
+    color: #4d3e35;
+    margin-bottom: 0.5rem;
+}
+
+.review-author {
+    color: #7f6b5c;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ===== БЛОК 8: ЦЕНЫ ===== */
+.prices-block {
+    background: #fffaf5;
+    padding: 3rem 0;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.price-card {
+    background: #fffcf8;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(140, 100, 75, 0.08);
+}
+
+.price-card.featured {
+    border: 2px solid #dbb8a2;
+    background: #fdf8f2;
+    transform: scale(1.02);
+}
+
+.price-card.featured:hover {
+    transform: scale(1.04);
+}
+
+.price-card h3 {
+    font-size: 1.3rem;
+    color: #4d3e35;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #8b6b57;
+    margin: 0.5rem 0;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.price-card ul li {
+    padding: 0.3rem 0;
+    color: #6f5e4f;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #f0e8e0;
+}
+
+.price-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* ===== БЛОК 9: КОНТАКТЫ ===== */
+.contacts-block {
+    background: #fcf8f0;
+    padding: 3rem 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    background: #fffcf8;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid #eee5dd;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(140, 100, 75, 0.06);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    color: #4d3e35;
+    font-weight: 450;
+}
+
+/* ===== БЛОК 10: ФУТЕР ===== */
+.footer-block {
+    background: #2e2b28;
+    color: #e8ddd0;
+    padding: 3rem 0 1.5rem;
+    animation: fadeSlideUp 0.8s ease;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #f5ebe1;
+}
+
+.footer-brand p {
+    color: #b8a797;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #d4c5b8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f5ebe1;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+}
+
+.footer-social span {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.footer-social span:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #b8a797;
+    font-size: 0.9rem;
+}
+
+.footer-heart {
+    margin-top: 0.3rem;
+    display: inline-block;
+    animation: heartbeat 2s infinite ease-in-out;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeSlideDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softAppear {
+    0% { opacity: 0; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pawWave {
+    0% { transform: rotate(-8deg) scale(1); }
+    100% { transform: rotate(12deg) scale(1.1); }
+}
+
+@keyframes floatPulse {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.15); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    56% { transform: scale(1); }
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .header-block h1 {
+        font-size: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .prices-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .price-card.featured {
+        transform: scale(1);
+    }
+    
+    .price-card.featured:hover {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-block h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subhead {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .breeds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kittens-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
